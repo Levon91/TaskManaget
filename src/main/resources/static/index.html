@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Manager</title>
+    <link href="/webjars/bootstrap/3.3.1/css/bootstrap.css" rel="stylesheet" media="screen"/>
+
+
+    <link href="/css/main.css" rel="stylesheet" media="screen"/>
+
+</head>
+<body ng-app="TaskManager" ng-controller="main">
+
+<div class="container" ng-show="isLoading">
+    <div class="row">
+        <div class="animationload">
+            <div class="osahanloading"></div>
+        </div>
+    </div>
+</div>
+
+<div ui-view=""></div>
+
+<script src="/webjars/jquery/2.1.4/jquery.js"></script>
+<script src="/webjars/angularjs/1.5.5/angular.js"></script>
+
+<script src="/webjars/bootstrap/3.3.1/js/bootstrap.js"></script>
+
+<script src="/webjars/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+
+<script src="/webjars/angular-cookie/4.0.9/angular-cookie.js"></script>
+<script src="/webjars/query-string/1.0.0/query-string.js"></script>
+<script src="/webjars/angular-oauth2/2.1.0/dist/angular-oauth2.js"></script>
+
+
+<script>
+    var TaskManager = TaskManager || {};
+</script>
+<!--App bootstrap js-->
+<script src="/js/app.js"></script>
+
+<!--App configs-->
+<script src="/js/config/constants.js"></script>
+<script src="/js/config/config.js"></script>
+<script src="/js/config/namespaces.js"></script>
+<script src="/js/config/routProvider.js"></script>
+
+
+<!--App controllers-->
+<script src="/js/controllers/admin/AdminCtrl.js"></script>
+<script src="/js/controllers/HomeCtrl.js"></script>
+<script src="/js/controllers/LoginCtrl.js"></script>
+<script src="/js/controllers/MainCtrl.js"></script>
+<script src="/js/controllers/RegisterCtrl.js"></script>
+<script src="/js/controllers/admin/UserCtrl.js"></script>
+<script src="/js/controllers/admin/TaskCtrl.js"></script>
+<script src="/js/controllers/admin/ProjectCtrl.js"></script>
+
+
+<!--App services-->
+<script src="/js/services/oauthService.js"></script>
+<script src="/js/services/userService.js"></script>
+<script src="/js/services/storageService.js"></script>
+<script src="/js/services/admin/ProjectService.js"></script>
+<script src="/js/services/admin/TaskService.js"></script>
+
+<!--App directives-->
+<script src="/js/directives/task.js"></script>
+
+</body>
+</html>
